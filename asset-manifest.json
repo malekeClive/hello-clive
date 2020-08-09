@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/hello-clive/static/css/main.92f363ab.chunk.css",
+    "main.js": "/hello-clive/static/js/main.bf5ea947.chunk.js",
+    "main.js.map": "/hello-clive/static/js/main.bf5ea947.chunk.js.map",
+    "runtime-main.js": "/hello-clive/static/js/runtime-main.6872b596.js",
+    "runtime-main.js.map": "/hello-clive/static/js/runtime-main.6872b596.js.map",
+    "static/js/2.3a3e1307.chunk.js": "/hello-clive/static/js/2.3a3e1307.chunk.js",
+    "static/js/2.3a3e1307.chunk.js.map": "/hello-clive/static/js/2.3a3e1307.chunk.js.map",
+    "index.html": "/hello-clive/index.html",
+    "precache-manifest.4a224c9c231276dbf1addcf1e657dc52.js": "/hello-clive/precache-manifest.4a224c9c231276dbf1addcf1e657dc52.js",
+    "service-worker.js": "/hello-clive/service-worker.js",
+    "static/css/main.92f363ab.chunk.css.map": "/hello-clive/static/css/main.92f363ab.chunk.css.map",
+    "static/js/2.3a3e1307.chunk.js.LICENSE.txt": "/hello-clive/static/js/2.3a3e1307.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6872b596.js",
+    "static/js/2.3a3e1307.chunk.js",
+    "static/css/main.92f363ab.chunk.css",
+    "static/js/main.bf5ea947.chunk.js"
+  ]
+}
