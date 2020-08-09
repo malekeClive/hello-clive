@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { css } from 'emotion';
+
+import Home from './Components/Home';
+import SplashScreen from './Components/SplashScreen';
+import Top from './Components/Top';
+import Bottom from './Components/Bottom';
+import About from './Components/About';
 
 function App() {
+  const [ isSplashScreenDone, setIsSplashScreenDone ] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
+      { isSplashScreenDone ? 
+        <div>
+          <header>
+            <Top />
+          </header>
+
+          <main className={css`
+            display: flex;
+            flex-direction: column;
+            margin: 10px 10%;
+          `}>
+            <section className={css`
+              height: 100vh;
+            `}>
+              <Home />
+            </section>
+            <section>
+              <About />
+            </section>
+          </main>
+          
+          <footer>
+            <Bottom />
+          </footer>
+        </div>
+      :
+        null
+      } 
     </div>
   );
 }
