@@ -4,57 +4,87 @@ import { css } from 'emotion';
 export default function About() {
   return (
     <div>
-      <div>
+      <div className={css`
+        display: flex;
+        align-items: center;
+
+        @media only screen and (min-width: 768px) {
+          h3 {
+            font-size: 3rem;
+          }
+          p {
+            font-size: 2rem;
+          }
+        }
+      `}>
         <h3 className={css`
           display: inline-block;
-          font-size: 4rem;
+          font-size: 2rem;
           margin: .5rem 0;
           `}>about
         </h3>
-        <h3 className={css`
-          font-size: 2rem;
-          display: inline-block;
-          margin: .5rem .5rem;
-          font-style: italic;
-          color: #474787;
-          height: 20px;
+
+        {/* <button className={css`
+          display: none;
+
+          @media only screen and (min-width: 768px) {
+
+            display: inline-block;
+            position: relative;
+            background-color: #1e272e;
+            left: 2%;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            color: #fff;
+          }
         `}>
-          | əˈbout
-        </h3>
+        </button> */}
       </div>
 
       <div>
         <p className={css`
-          font-size: 3rem;
+          font-size: 1.5rem;
           margin: 0;
+          width: 70%;
           `}>I'm a front-end developer based in batam. Currently working as a game developer in a company in batam.</p>
       </div>
 
       <div className={css`
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 5em;
 
         > div {
-          margin: 20px 0;
+          margin: 1em 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+          margin-top: 12em;
+
+          h5 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1.5rem;
+          }
         }
       `}>
         <div>
           <div className={css`
             display: inline-block;
-            background-color: #474787;
-            color: #fff;
             margin-bottom: 10px;
           `}>
             <h5 className={css`
-              font-size: 2rem;
+              font-size: 1.5rem;
               margin: 0;
             `}>what i usually do</h5>
           </div>
 
           <div>
             <p className={css`
-              font-size: 1.5rem;
+              font-size: 1rem;
               margin: 0;
             `}>front-end development</p>
           </div>
@@ -63,26 +93,24 @@ export default function About() {
         <div>
           <div className={css`
             display: inline-block;
-            background-color: #474787;
-            color: #fff;
             margin-bottom: 10px;
           `}>
             <h5 className={css`
-              font-size: 2rem;
+              font-size: 1.5rem;
               margin: 0;
             `}>what tech i used</h5>
           </div>
 
-          <div>
+          <div className={css`
+            font-size: 1rem;
+          `}>
             <p className={css`
-              font-size: 1.5rem;
               margin: 0;
             `}>
               unity engine (at work)
             </p>
 
             <p className={css`
-              font-size: 1.5rem;
               margin: 0;
             `}>
               react js (self taught)
@@ -94,11 +122,9 @@ export default function About() {
           <div className={css`
             display: inline-block;
             margin-bottom: 10px;
-            background-color: #474787;
-            color: #fff;
           `}>
             <h5 className={css`
-              font-size: 2rem;
+              font-size: 1.5rem;
               margin: 0;
             `}>contact & social media</h5>
           </div>

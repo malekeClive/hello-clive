@@ -26,7 +26,7 @@ export default function Bottom() {
         right: 0;
         margin: 0 auto;
         width: 80%;
-        border-top: 2px solid #474787;
+        border-top: 2px solid #1e272e;
 
       `}>
         <div className={css`

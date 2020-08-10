@@ -1,53 +1,81 @@
 import React, { useRef, useEffect } from 'react';
 import { css } from 'emotion';
 
-import { TweenMax, Power3 } from 'gsap';
+import { TimelineMax, Power3 } from 'gsap';
 
 export default function Home() {
-  const home  = useRef(null);
+  const text1  = useRef(null);
+  const text2  = useRef(null);
 
   useEffect(() => {
-    TweenMax.to(
-      home.current,
-      3,
+    let tl = new TimelineMax();
+    
+    tl.to(
+      text1.current,
+      1,
       {
-        opacity: 1,
-        y: 30,
+        y: 0,
+        ease: Power3.easeIn
+      }
+    ).to(
+      text2.current,
+      1,
+      {
+        y: 0,
         ease: Power3.easeOut
       }
     );
   }, []);
 
   return (
-    <div className={css`
-      position: relative;
-      top: 20vh;
-    `}>
-      <div className={css`
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        height: 100px;
-      `}>
-      </div>
-      <h1 ref={ home } className={css`
-        opacity: 0;
-        color: #fff;
-        text-align: center;
+    <div>
+      <h1 className={css`
+        color: #1e272e;
+        text-align: left;
         margin: 0;
         font-style: italic;
-        font-size: 8rem;
-        text-shadow: 5px 5px #474787;
+        font-size: 5rem;
+
+        @media only screen and (min-width: 768px) {
+          font-size: 7rem;
+        }
       `}>
-        <div>
-          front-end
+        <div className={css`
+          overflow: hidden;
+
+          @media only screen and (min-width: 768px) {
+            display: inline-block;
+            padding-right: 10px;
+          }
+        `}>
+          <span ref={text1} className={css`
+            display: inline-block;
+            transform: translate(0, 80px);
+
+            @media only screen and (min-width: 768px) {
+              transform: translate(0, 120px);
+            }
+          `}>Franco</span>
         </div>
-        <div>
-          developer
+
+        <div className={css`
+          overflow: hidden;
+
+          @media only screen and (min-width: 768px) {
+            display: inline-block;
+            padding-right: 20px;
+          }
+        `}>
+          <span ref={text2} className={css`
+            display: inline-block;
+            transform: translate(0, -80px);
+
+            @media only screen and (min-width: 768px) {
+              transform: translate(0, -120px);
+            }
+          `}> Clive M</span>
         </div>
       </h1>
-
     </div>
   )
 }

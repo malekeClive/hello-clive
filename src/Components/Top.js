@@ -4,47 +4,54 @@ import { css } from 'emotion';
 import { TweenMax, Power3 } from 'gsap';
 
 export default function Top() {
-  const top = useRef(null);
+  const line = useRef(null);
+  const text = useRef(null);
 
   useEffect(() => {
     TweenMax.to(
-      top.current,
-      2,
+      line.current,
+      1,
       {
-        opacity: 1,
+        width: "80%",
         ease: Power3.easeOut
       }
-    )
+    );
+    
+    const delay = setTimeout(() => {
+      TweenMax.to(
+        text.current,
+        1.5,
+        {
+          y: 0,
+          ease: Power3.easeOut
+        }
+      );
+    }, 100);
+
+    return () => clearTimeout(delay);
   }, []);
 
   return (
-    <div ref={ top } className={css`
-      opacity: 0;
+    <div className={css`
+      padding-top: 10%;
+      padding-left: 10%;
+      padding-right: 10%;
     `}>
       <div className={css`
-        position: absolute;
-        left: 0; 
-        right: 0;
-        margin: 0 auto;
-        width: 80%;
-        border-bottom: 2px solid #474787;
+        overflow: hidden;
       `}>
-        <div className={css`
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin: .5rem 0;
+        <p ref={text} className={css`
+          transform: translate(0, 40px);
+          font-size: 1.5rem;
+          margin-bottom: .5rem;
         `}>
-          <p>
-            porftolio
-          </p>
-          <p>
-            franco clive maleke
-          </p>
-          <p>
-            &#128054;
-          </p>
-        </div>
+          Front-end Dev
+        </p>
+      </div>
+      <div ref={line} className={css`
+        border-bottom: 3px solid #1e272e;
+        width: 0;
+      `}>
       </div>
     </div>
   )

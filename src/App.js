@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+// import './App.css';
 import { css } from 'emotion';
 
 import Home from './Components/Home';
@@ -26,7 +26,11 @@ function App() {
             margin: 10px 10%;
           `}>
             <section className={css`
-              height: 100vh;
+              height: 15em;
+
+              @media only screen and (min-width: 768px) {
+                height: 10em;
+              }
             `}>
               <Home />
             </section>
@@ -41,7 +45,7 @@ function App() {
         </div>
       :
         null
-      } 
+      }
     </div>
   );
 }
