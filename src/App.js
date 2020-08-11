@@ -7,14 +7,15 @@ import SplashScreen from './Components/SplashScreen';
 import Top from './Components/Top';
 import Bottom from './Components/Bottom';
 import About from './Components/About';
+import Experience from './Components/Experience';
 
 function App() {
   const [ isSplashScreenDone, setIsSplashScreenDone ] = useState(false);
 
   return (
     <div className="container">
-      <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
-      { isSplashScreenDone ? 
+      {/* <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
+      { isSplashScreenDone ?  */}
         <div>
           <header>
             <Top />
@@ -34,8 +35,13 @@ function App() {
             `}>
               <Home />
             </section>
+
             <section>
               <About />
+            </section>
+
+            <section>
+              <Experience />
             </section>
           </main>
           
@@ -43,9 +49,9 @@ function App() {
             <Bottom />
           </footer>
         </div>
-      :
+      {/* :
         null
-      }
+      } */}
     </div>
   );
 }

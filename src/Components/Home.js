@@ -14,14 +14,16 @@ export default function Home() {
       text1.current,
       1,
       {
-        y: 0,
+        top: 0,
+        // y: 0,
         ease: Power3.easeIn
       }
     ).to(
       text2.current,
       1,
       {
-        y: 0,
+        top: 0,
+        // y: 0,
         ease: Power3.easeOut
       }
     );
@@ -42,6 +44,9 @@ export default function Home() {
       `}>
         <div className={css`
           overflow: hidden;
+          position: relative;
+          height: 1.3em;
+          width: 3.5em;
 
           @media only screen and (min-width: 768px) {
             display: inline-block;
@@ -49,17 +54,17 @@ export default function Home() {
           }
         `}>
           <span ref={text1} className={css`
+            position: absolute;
             display: inline-block;
-            transform: translate(0, 80px);
-
-            @media only screen and (min-width: 768px) {
-              transform: translate(0, 120px);
-            }
+            top: -1.1em;
           `}>Franco</span>
         </div>
 
         <div className={css`
           overflow: hidden;
+          position: relative;
+          height: 1.3em;
+          width: 3.5em;
 
           @media only screen and (min-width: 768px) {
             display: inline-block;
@@ -67,12 +72,9 @@ export default function Home() {
           }
         `}>
           <span ref={text2} className={css`
+            position: absolute;
             display: inline-block;
-            transform: translate(0, -80px);
-
-            @media only screen and (min-width: 768px) {
-              transform: translate(0, -120px);
-            }
+            bottom: -1.1em;
           `}> Clive M</span>
         </div>
       </h1>

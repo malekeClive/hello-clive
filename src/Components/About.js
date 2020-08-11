@@ -61,7 +61,7 @@ export default function About() {
         }
 
         @media only screen and (min-width: 768px) {
-          margin-top: 12em;
+          margin-top: 5em;
 
           h5 {
             font-size: 2rem;

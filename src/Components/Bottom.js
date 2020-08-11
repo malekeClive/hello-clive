@@ -19,6 +19,9 @@ export default function Bottom() {
 
   return (
     <div ref={ top } className={css`
+      padding-bottom: 10%;
+      padding-left: 10%;
+      padding-right: 10%;
     `}>
       <div className={css`
         position: absolute;
