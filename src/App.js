@@ -14,8 +14,8 @@ function App() {
 
   return (
     <div className="container">
-      {/* <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
-      { isSplashScreenDone ?  */}
+      <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
+      { isSplashScreenDone ? 
         <div>
           <header>
             <Top />
@@ -49,9 +49,9 @@ function App() {
             <Bottom />
           </footer>
         </div>
-      {/* :
+      :
         null
-      } */}
+      }
     </div>
   );
 }

@@ -24,13 +24,8 @@ export default function Bottom() {
       padding-right: 10%;
     `}>
       <div className={css`
-        position: absolute;
-        left: 0; 
-        right: 0;
-        margin: 0 auto;
         width: 80%;
         border-top: 2px solid #1e272e;
-
       `}>
         <div className={css`
           margin: .7rem 0;
