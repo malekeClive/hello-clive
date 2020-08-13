@@ -15,8 +15,9 @@ export default function Experience() {
       </div>
 
       <div>
-        <p><b>2019 - present. Unity developer at astagame.</b></p>
-        <p>developing and collaborating with other team to make interactive card game.</p>
+        <p><b>2019 - present. Unity developer at PT. Asta Satria Investama.</b></p>
+        <p>PT. Asta Satria Investama is a startup company that developing casino games like big two, domino susun, poker and domino qq.</p>
+        <p>As a front-end my job is to develop features like find room menu, profile menu, settings menu, etc.</p>
       </div>
     </div>
   )

@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+
   const revealRefs = useRef([]);
   const hideComponent = useRef(null);
 
@@ -154,49 +155,72 @@ export default function About() {
             `}>contact & social media</h5>
           </div>
 
-          <div>
-            <p className={css`
-              font-size: 1rem;
-              color: #474787;
-            `}>
-              phone 
-            </p>
-            <p className={css`
-              font-size: 1.3rem;
-              margin: 0;
-            `}>
-              +62-852-6781-9928
-            </p>
-
-            <p className={css`
-              font-size: 1rem;
-              color: #474787;
-            `}>
-              email
-            </p>
-            <p className={css`
-              font-size: 1.3rem;
-              margin: 0;
-            `}>
-              francoclivemaleke23@gmail.com
-            </p>
-
-            <p className={css`
-              font-size: 1rem;
-              color: #474787;
-            `}>
-              github
-            </p>
-            <p className={css`
-              font-size: 1.3rem;
-              margin: 0;
-            `}>
-              github.com/malekeclive
-            </p>
-          </div>
+          <Contacts label="phone" name="+62-852-6781-9928" />
+          <Contacts label="email" name="francoclivemaleke23@gmail.com" link="mailto:francoclivemaleke23@gmail.com" />
+          <Contacts label="github" name="github.com/malekeClive" link="https://github.com/malekeClive" />
+          
         </div>
       </div>
 
+    </div>
+  )
+}
+
+const Contacts = ({ label, name, link="empty" }) => {
+  return (
+    <div className={css`
+      margin-bottom: 7px;
+    `}>
+      <p className={css`
+        font-size: 1rem;
+        color: #474787;
+      `}>
+        { label }
+      </p>
+
+      { link === "empty" ? 
+        <p className={css`
+          font-size: 1.3rem;
+          margin: 0;
+        `}>
+          { name }
+        </p>
+      : 
+        <p className={css`
+          font-size: 1.3rem;
+          margin: 0;
+        `}>
+          <a 
+            className={css`
+              text-decoration: none;
+              position: relative;
+              color: inherit;
+              
+              &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: -5px;
+                width: 0;
+                height: 1px;
+                background-color: #1e272e;
+                transition-property: width;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+              }
+
+              &:hover:after {
+                left: 0;
+                width: 100%;
+              }
+            `} 
+            href={ link } 
+            target="_blank">
+              { name }
+          </a>
+        </p>
+      }
     </div>
   )
 }
