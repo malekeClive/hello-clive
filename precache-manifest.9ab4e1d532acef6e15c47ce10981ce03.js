@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "933e4beb362337dd647d75e4a5f5b7f4",
+    "revision": "34bf8326a69dfc61d2e8df6d39d23275",
     "url": "/hello-clive/index.html"
   },
   {
-    "revision": "183066926276d9185a5f",
+    "revision": "d6c10d04318a0a42ad47",
     "url": "/hello-clive/static/css/main.11f41e8e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hello-clive/static/js/2.a7291ffb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "183066926276d9185a5f",
-    "url": "/hello-clive/static/js/main.e3b728bc.chunk.js"
+    "revision": "d6c10d04318a0a42ad47",
+    "url": "/hello-clive/static/js/main.8206cc1c.chunk.js"
   },
   {
     "revision": "ad804ceb02bb3fb2b5ff",
