@@ -1,6 +1,6 @@
 {
-  "homepage": "http://malekeclive.github.io/me",
-  "name": "me",
+  "homepage": "http://malekeclive.github.io/hello-clive",
+  "name": "hello-clive",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
