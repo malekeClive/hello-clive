@@ -6,8 +6,6 @@ import { Power3, TimelineMax } from 'gsap';
 export default function SplashScreen({ setIsSplashScreenDone }) {
   let rootBackground = useRef(null);
   let myName = useRef(null);
-  let backgroundFillTop     = useRef(null);
-  let backgroundFillBottom  = useRef(null);
 
   useEffect(() => {
     const myNameAnimation = setTimeout(() => {
@@ -21,19 +19,12 @@ export default function SplashScreen({ setIsSplashScreenDone }) {
           ease: Power3.easeIn
         }
       ).to(
-        backgroundFillTop.current,
+        rootBackground.current,
         1,
         {
-          height: 0,
+          opacity: 0,
           ease: Power3.easeIn
-        },
-      ).to(
-        backgroundFillBottom.current,
-        1,
-        {
-          height: 0,
-          ease: Power3.easeIn
-        } //, "+=0.2" ~> add delay if neccessary
+        }
       ).eventCallback("onComplete", () => {
         rootBackground.current.style.display = "none";
         setIsSplashScreenDone(true);
@@ -44,31 +35,15 @@ export default function SplashScreen({ setIsSplashScreenDone }) {
     return () => {
       clearTimeout(myNameAnimation)
     };
-  }, []);
+  }, [setIsSplashScreenDone]);
 
   return (
     <div ref={rootBackground} className={css`
       position: fixed;
       width: 100%;
       height: 100%;
-      // background-color: #1e272e;
+      background-color: #1e272e;
     `}>
-      <div ref={backgroundFillTop} className={css`
-        position: fixed;
-        height: 50%;
-        width: 100%;
-        background-color: #1e272e;
-      `}>
-      </div>
-
-      <div ref={backgroundFillBottom} className={css`
-        position: fixed;
-        bottom: 0;
-        height: 50%;
-        width: 100%;
-        background-color: #1e272e;
-      `}>
-      </div>
       
       <div className={css`
         position: fixed;

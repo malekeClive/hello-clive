@@ -45,7 +45,7 @@ export default function Top() {
           font-size: 1.5rem;
           margin-bottom: .5rem;
         `}>
-          Front-end Dev
+          Front-end Engineer
         </p>
       </div>
       <div ref={line} className={css`
