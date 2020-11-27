@@ -64,7 +64,7 @@ export default function About() {
             display: inline-block;
             font-size: 2rem;
             margin: .5rem 0;
-            `}>about
+            `}>About
           </h3>
         </div>
 
@@ -73,7 +73,13 @@ export default function About() {
             font-size: 1.5rem;
             margin: 0;
             width: 70%;
-            `}>I'm a front-end developer based in batam. Currently working as a game developer in a company in batam.</p>
+            `}>Hi there, you can call me Clive. i loved to learn and makes a
+            new things especially in tech.
+            I was learning on front-end side for a year and also i can do
+            little bit things on back-end side.
+            Currently develop a casino games using Unity on front-end
+            side.
+            </p>
         </div>
       </div>
 
@@ -105,7 +111,7 @@ export default function About() {
             <h5 className={css`
               font-size: 1.5rem;
               margin: 0;
-            `}>what i usually do</h5>
+            `}>What i usually do</h5>
           </div>
 
           <div>
@@ -124,7 +130,7 @@ export default function About() {
             <h5 className={css`
               font-size: 1.5rem;
               margin: 0;
-            `}>what tech i used</h5>
+            `}>What tech i used</h5>
           </div>
 
           <div className={css`
@@ -152,7 +158,7 @@ export default function About() {
             <h5 className={css`
               font-size: 1.5rem;
               margin: 0;
-            `}>contact & social media</h5>
+            `}>Contact & social media</h5>
           </div>
 
           <Contacts label="phone" name="+62-852-6781-9928" />
@@ -216,6 +222,7 @@ const Contacts = ({ label, name, link="empty" }) => {
               }
             `} 
             href={ link } 
+            rel="noopener noreferrer"
             target="_blank">
               { name }
           </a>

@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "homepage": "http://malekeclive.github.io/hello-clive",
   "name": "hello-clive",
+=======
+  "homepage": "http://malekeclive.github.io/me",
+  "name": "me",
+>>>>>>> test
   "version": "0.1.0",
   "private": true,
   "dependencies": {

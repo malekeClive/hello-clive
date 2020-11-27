@@ -27,11 +27,6 @@ export default function Bottom() {
         width: 80%;
         border-top: 2px solid #1e272e;
       `}>
-        <div className={css`
-          margin: .7rem 0;
-          font-size: 1.5rem;
-          text-align: center;
-        `}>&#128075;</div>
       </div>
     </div>
   )
