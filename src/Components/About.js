@@ -34,8 +34,8 @@ export default function About() {
           scrollTrigger: {
             id: `section-${idx + 1}`,
             trigger: el,
-            start: 'top center+=250',
-            toggleActions: 'play none none reverse',
+            start: 'top center+=150vw',
+            toggleActions: 'play none none none',
             // markers: true
           }
         });
@@ -53,10 +53,10 @@ export default function About() {
 
           @media only screen and (min-width: 768px) {
             h3 {
-              font-size: 3rem;
+              font-size: 3.5rem;
             }
             p {
-              font-size: 2rem;
+              font-size: 2.5rem;
             }
           }
         `}>
@@ -80,14 +80,15 @@ export default function About() {
       <div className={css`
         display: flex;
         flex-direction: column;
-        margin-top: 5em;
+        margin-top: 3vw;
+
 
         > div {
           margin: 1em 0;
         }
 
         @media only screen and (min-width: 768px) {
-          margin-top: 6em;
+          margin-top: 3vw;
 
           h5 {
             font-size: 3rem;
@@ -130,17 +131,12 @@ export default function About() {
           <div className={css`
             font-size: 1rem;
           `}>
-            <p className={css`
-              margin: 0;
-            `}>
-              unity engine (at work)
-            </p>
+            <Skills skill="unity" />
+            <Skills skill="react hooks" />
+            <Skills skill="redux" />
+            <Skills skill="html" />
+            <Skills skill="css" />
 
-            <p className={css`
-              margin: 0;
-            `}>
-              react js (self taught)
-            </p>
           </div>
         </div>
 
@@ -163,6 +159,16 @@ export default function About() {
       </div>
 
     </div>
+  )
+}
+
+const Skills = ({ skill }) => {
+  return(
+    <p className={css`
+      margin: 0;
+    `}>
+      { skill }
+    </p>
   )
 }
 
