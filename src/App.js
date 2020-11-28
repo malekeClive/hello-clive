@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 // import './App.css';
 import { css } from 'emotion';
 
 import Home from './Components/Home';
 import SplashScreen from './Components/SplashScreen';
-import Top from './Components/Top';
 import Bottom from './Components/Bottom';
 import About from './Components/About';
 import Experience from './Components/Experience';
@@ -13,32 +12,29 @@ import Next from './Components/Next';
 function App() {
   const [ isSplashScreenDone, setIsSplashScreenDone ] = useState(false);
 
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop); // from -> to
+
+  const myRef = useRef(null);
+  const executeScroll = () => scrollToRef(myRef);
+
   return (
     <div className="container">
-      {/* <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
+      <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
       { isSplashScreenDone ? 
-        
-      :
-        null
-      } */}
-      <div>
-          <header>
-            <Top />
-          </header>
-
+        <div>
           <main className={css`
             display: flex;
             flex-direction: column;
             margin: 10px 10%;
           `}>
             <section className={css`
-              height: 90vh;
+              height: 100vh;
             `}>
               <Home />
-              <Next />
+              <Next executeScroll={executeScroll} />
             </section>
 
-            <section>
+            <section ref={myRef}>
               <About />
             </section>
 
@@ -51,6 +47,9 @@ function App() {
             <Bottom />
           </footer>
         </div>
+      :
+        null
+      }
     </div>
   );
 }

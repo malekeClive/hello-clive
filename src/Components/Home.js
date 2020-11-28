@@ -23,10 +23,11 @@ export default function Home() {
   return (
     <div>
       <h1 className={css`
+        font-family: 'Caveat', cursive;
         color: #1e272e;
-        text-align: left;
-        margin: 10vh auto;
-        font-size: 4rem;
+        font-size: 6rem;
+        margin: 0;
+        padding-top: 10rem;
 
         @media only screen and (min-width: 768px) {
           font-size: 6rem;
@@ -37,16 +38,16 @@ export default function Home() {
         }
       `}>
         <div className={css`
-          overflow: hidden;
           position: relative;
-          height: 1.3em;
         `}>
-          <span ref={text1} className={css`
+          <div ref={text1} className={css`
             position: absolute;
-            display: inline-block;
+            text-align: center;
+            width: 100%;
             top: .3em;
             opacity: 0;
-          `}>HI! I'M CLIVE</span>
+          `}>I'm Clive
+          </div>
         </div>
       </h1>
 

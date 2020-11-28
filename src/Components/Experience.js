@@ -8,12 +8,11 @@ export default function Experience() {
     <div className={css`
       margin-bottom: 1em;
     `}>
-      <div>
-        <h3 className={css`
-          font-size: 3rem;
-          margin: .5rem 0;
-        `}>career</h3>
-      </div>
+      <h3 className={css`
+        font-weight: 200;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      `}>Projects</h3>
 
       <div className={css`
         display: grid;
@@ -26,8 +25,6 @@ export default function Experience() {
         }
 
       `}>
-        <Career />
-        <Career />
         <Career />
       </div>
     </div>
@@ -45,21 +42,47 @@ const Career = () => {
       }
     `}>
       <img className={css`
-        width: 100%;
+        flex: 1;
+        width: 350px;
+        object-fit: cover;
+
+        @media only screen and (min-width: 992px) {
+          width: 200px;
+        }
       `} src={imgAstagame} alt="astagame" />
 
       <div className={css`
-        color: #fff;
-        transition: .5s ease;
+        color: #acaeb0;
         background-color: #1e272e;
-        padding: 5px;
-        width: 50%;
+        padding: 20px;
+        width: 350px;
+
+        @media only screen and (min-width: 992px) {
+          width: 200px;
+        }
       `}>
-        <p>PT. Asta Satria Investama</p>
-        <p className={css`
-          font-style: italic;
-        `}>Tech used : Unity</p>
+        <CareerDetail label="Company" title="PT. Asta Satria Investama" />
+        <CareerDetail label="Project" title="Casino games" />
+        <CareerDetail label="Tech" title="Unity engine" />
+        <CareerDetail label="Link" title="https://play.google.com/store/apps/details?id=com.asta.astagame" />
       </div>
+    </div>
+  )
+}
+
+const CareerDetail = ({ label, title }) => {
+  return (
+    <div>
+      <p className={css`
+        font-size: .8rem;
+        font-weight: 100;
+        margin-bottom: 7px;
+      `}>{label}</p>
+      <p className={css`
+        font-size: .8rem;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+      `}>{title}</p>
     </div>
   )
 }

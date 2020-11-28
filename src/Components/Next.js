@@ -1,10 +1,11 @@
 import React from 'react'
 import { css } from 'emotion';
 
-export default function Next() {
+export default function Next({ executeScroll }) {
   return (
     <div>
-      <button className={css`
+      <button onClick={executeScroll} className={css`
+        font-family: 'Caveat', cursive;
         position: absolute;
         bottom: 0;
         left: 50%;
