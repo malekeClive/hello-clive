@@ -24,7 +24,6 @@ export default function Bottom() {
       padding-right: 10%;
     `}>
       <div className={css`
-        width: 80%;
         border-top: 2px solid #1e272e;
       `}>
         <div className={css`

@@ -47,7 +47,7 @@ export default function About() {
       visibility: hidden;
     `}>
       <div ref={addToRefs}>
-        <div className={css`
+        {/* <div className={css`
           display: flex;
           align-items: center;
 
@@ -66,15 +66,21 @@ export default function About() {
             margin: .5rem 0;
             `}>about
           </h3>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <p className={css`
             font-size: 1.5rem;
             margin: 0;
             width: 70%;
-            `}>I'm a front-end developer based in batam. Currently working as a game developer in a company in batam.</p>
-        </div>
+            `}>Hi there, you can call me Clive. i loved to learn and makes a
+            new things especially in tech.
+            I was learning on front-end side for a year and also i can do
+            little bit things on back-end side.
+            Currently develop a casino games using Unity on front-end
+            side.
+            </p>
+        </div> */}
       </div>
 
       <div className={css`
