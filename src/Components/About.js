@@ -47,7 +47,7 @@ export default function About() {
       visibility: hidden;
     `}>
       <div ref={addToRefs}>
-        <div className={css`
+        {/* <div className={css`
           display: flex;
           align-items: center;
 
@@ -66,9 +66,9 @@ export default function About() {
             margin: .5rem 0;
             `}>About
           </h3>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <p className={css`
             font-size: 1.5rem;
             margin: 0;
@@ -80,7 +80,7 @@ export default function About() {
             Currently develop a casino games using Unity on front-end
             side.
             </p>
-        </div>
+        </div> */}
       </div>
 
       <div className={css`

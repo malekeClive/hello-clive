@@ -12,7 +12,7 @@ export default function Top() {
       line.current,
       1,
       {
-        width: "80%",
+        width: "100%",
         ease: Power3.easeOut
       }
     );
@@ -45,11 +45,7 @@ export default function Top() {
           font-size: 1.5rem;
           margin-bottom: .5rem;
         `}>
-<<<<<<< HEAD
-          Front-end Dev
-=======
           Front-end Engineer
->>>>>>> test
         </p>
       </div>
       <div ref={line} className={css`

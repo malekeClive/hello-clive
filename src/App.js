@@ -8,15 +8,20 @@ import Top from './Components/Top';
 import Bottom from './Components/Bottom';
 import About from './Components/About';
 import Experience from './Components/Experience';
+import Next from './Components/Next';
 
 function App() {
   const [ isSplashScreenDone, setIsSplashScreenDone ] = useState(false);
 
   return (
     <div className="container">
-      <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
+      {/* <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
       { isSplashScreenDone ? 
-        <div>
+        
+      :
+        null
+      } */}
+      <div>
           <header>
             <Top />
           </header>
@@ -27,13 +32,10 @@ function App() {
             margin: 10px 10%;
           `}>
             <section className={css`
-              height: 15em;
-
-              @media only screen and (min-width: 768px) {
-                height: 10em;
-              }
+              height: 90vh;
             `}>
               <Home />
+              <Next />
             </section>
 
             <section>
@@ -49,9 +51,6 @@ function App() {
             <Bottom />
           </footer>
         </div>
-      :
-        null
-      }
     </div>
   );
 }
