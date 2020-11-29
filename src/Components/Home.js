@@ -11,8 +11,8 @@ export default function Home() {
     
     tl.to(
       text1.current,
-      1,
       {
+        duration: 1,
         top: 0,
         opacity: 1,
         ease: Power3.easeInOut

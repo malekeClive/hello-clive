@@ -12,16 +12,15 @@ export default function SplashScreen({ setIsSplashScreenDone }) {
       var tl = new TimelineMax();
       tl.to(
         myName.current,
-        1,
         {
-          opacity: 0,
+          duration: 1,
           y: 30,
           ease: Power3.easeIn
         }
       ).to(
         rootBackground.current,
-        1,
         {
+          duration: 1,
           opacity: 0,
           ease: Power3.easeInOut
         }
