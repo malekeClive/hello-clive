@@ -14,14 +14,14 @@ export default function SplashScreen({ setIsSplashScreenDone }) {
         myName.current,
         {
           duration: 1,
-          y: 30,
+          translateY: 30,
           ease: Power3.easeIn
         }
       ).to(
         rootBackground.current,
         {
           duration: 1,
-          opacity: 0,
+          autoAlpha: 0,
           ease: Power3.easeInOut
         }
       ).eventCallback("onComplete", () => {

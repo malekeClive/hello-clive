@@ -13,8 +13,8 @@ export default function Home() {
       text1.current,
       {
         duration: 1,
-        top: 0,
-        opacity: 1,
+        translateY: 0,
+        autoAlpha: 1,
         ease: Power3.easeInOut
       }
     )
