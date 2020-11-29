@@ -11,6 +11,12 @@ import Summary from './Components/Summary';
 import Next from './Components/Next';
 import Expertise from './Components/Expertise';
 
+import { gsap } from 'gsap'
+import { CSSPlugin } from 'gsap/CSSPlugin'
+
+// Force CSSPlugin to not get dropped during build
+gsap.registerPlugin(CSSPlugin)
+
 function App() {
   const [ isSplashScreenDone, setIsSplashScreenDone ] = useState(false);
 

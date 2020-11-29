@@ -14,7 +14,7 @@ export default function SplashScreen({ setIsSplashScreenDone }) {
         myName.current,
         {
           duration: 1,
-          translateY: 30,
+          y: 30,
           ease: Power3.easeIn
         }
       ).to(
