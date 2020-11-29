@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hello-clive/static/css/main.30d739e5.chunk.css",
-    "main.js": "/hello-clive/static/js/main.ab8f98b4.chunk.js",
-    "main.js.map": "/hello-clive/static/js/main.ab8f98b4.chunk.js.map",
+    "main.js": "/hello-clive/static/js/main.c693091f.chunk.js",
+    "main.js.map": "/hello-clive/static/js/main.c693091f.chunk.js.map",
     "runtime-main.js": "/hello-clive/static/js/runtime-main.63ff5091.js",
     "runtime-main.js.map": "/hello-clive/static/js/runtime-main.63ff5091.js.map",
     "static/js/2.bc57dddf.chunk.js": "/hello-clive/static/js/2.bc57dddf.chunk.js",
     "static/js/2.bc57dddf.chunk.js.map": "/hello-clive/static/js/2.bc57dddf.chunk.js.map",
     "index.html": "/hello-clive/index.html",
-    "precache-manifest.880df6fe24f76a39d92b8872516d7266.js": "/hello-clive/precache-manifest.880df6fe24f76a39d92b8872516d7266.js",
+    "precache-manifest.5334e70bcf9b4aca68b83d48c9f8039f.js": "/hello-clive/precache-manifest.5334e70bcf9b4aca68b83d48c9f8039f.js",
     "service-worker.js": "/hello-clive/service-worker.js",
     "static/css/main.30d739e5.chunk.css.map": "/hello-clive/static/css/main.30d739e5.chunk.css.map",
     "static/js/2.bc57dddf.chunk.js.LICENSE.txt": "/hello-clive/static/js/2.bc57dddf.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.63ff5091.js",
     "static/js/2.bc57dddf.chunk.js",
     "static/css/main.30d739e5.chunk.css",
-    "static/js/main.ab8f98b4.chunk.js"
+    "static/js/main.c693091f.chunk.js"
   ]
 }
