@@ -35,7 +35,7 @@ export default function SplashScreen({ setIsSplashScreenDone }) {
     return () => {
       clearTimeout(myNameAnimation)
     };
-  }, []);
+  }, [setIsSplashScreenDone]);
 
   return (
     <div ref={rootBackground} className={css`

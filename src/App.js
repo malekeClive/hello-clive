@@ -7,7 +7,9 @@ import SplashScreen from './Components/SplashScreen';
 import Bottom from './Components/Bottom';
 import About from './Components/About';
 import Experience from './Components/Experience';
+import Summary from './Components/Summary';
 import Next from './Components/Next';
+import Expertise from './Components/Expertise';
 
 function App() {
   const [ isSplashScreenDone, setIsSplashScreenDone ] = useState(false);
@@ -21,11 +23,10 @@ function App() {
     <div className="container">
       <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
       { isSplashScreenDone ? 
-        <div>
+       <div>
           <main className={css`
             display: flex;
             flex-direction: column;
-            margin: 10px 10%;
           `}>
             <section className={css`
               height: 100vh;
@@ -34,16 +35,36 @@ function App() {
               <Next executeScroll={executeScroll} />
             </section>
 
-            <section ref={myRef}>
+            <section className={css`
+              margin: 10px 10%;
+            `} ref={myRef}>
+              <Summary />
+            </section>
+
+            <section className={css`
+              margin: 10px 10%;
+            `}>
+              <Expertise />
+            </section>
+
+            <section className={css`
+              margin: 10px 10%;
+            `}>
               <About />
             </section>
 
-            <section>
+            <section className={css`
+              margin-top: 5em;
+              margin-left: 10%;
+              margin-right: 10%;
+            `}>
               <Experience />
             </section>
           </main>
           
-          <footer>
+          <footer className={css`
+            position: relative;
+          `}>
             <Bottom />
           </footer>
         </div>

@@ -22,6 +22,14 @@ export default function Home() {
 
   return (
     <div>
+      <div className={css`
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 10px;
+        bottom: 10px;
+        border: 1px solid #13222e;
+      `}></div>
       <h1 className={css`
         font-family: 'Caveat', cursive;
         color: #1e272e;

@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { css } from 'emotion';
+
+import backendImg from '../images/backend256.png';
+import gameImg from '../images/game256.png';
+import webImg from '../images/web256.png';
+
 
 export default function About() {
   return (
-    <div className={css`
-      height: 100vh;
-    `}>
+    <div>
       <h3 className={css`
         font-weight: 200;
         font-size: 3rem;
@@ -20,15 +23,15 @@ export default function About() {
           grid-template-columns: repeat(3, 1fr);
         }
       `}>
-        <Field fieldName="Game development" />
-        <Field fieldName="Front-end web development" />
-        <Field fieldName="Back-end development" />
+        <Field fieldName="Front-end web development" fieldImg={webImg} altImg="front-end dev" />
+        <Field fieldName="Game development" fieldImg={gameImg} altImg="game dev" />
+        <Field fieldName="Back-end development" fieldImg={backendImg} altImg="back-end dev" />
       </div>
     </div>
   )
 }
 
-const Field = ({ fieldName }) => {
+const Field = ({ fieldName, fieldImg, altImg }) => {
   return (
     <div className={css`
       display: flex;
@@ -37,15 +40,9 @@ const Field = ({ fieldName }) => {
       text-align: center;
       flex-direction: column;
     `}>
-      <div className={css`
-        width: 150px;
-        height: 150px;
-        background-color: grey;
-        width: 150px;
-        height: 150px;
-      `}>
-        image
-      </div>
+      <img className={css`
+        object-fit: cover;
+      `} src={ fieldImg } alt="astagame" />
       <p className={css`
       `}>
         { fieldName }

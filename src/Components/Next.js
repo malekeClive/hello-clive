@@ -7,18 +7,25 @@ export default function Next({ executeScroll }) {
       <button onClick={executeScroll} className={css`
         font-family: 'Caveat', cursive;
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #1e272e;
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;    
+        width: 150px;
+        height: 30px;
         border: none;
-        font-weight: bold;
         color: #fff;
+        outline: none;
+        font-size: 1.2rem;
+        transition: background-color .2s, color .2s ease-in-out;
+
+        &:hover {
+          border: 1px solid #13222e;
+          background-color: transparent;
+          color: #13222e;
+        }
       `}>
-        HEY !
+        More about me ?
       </button>
     </div>
   )

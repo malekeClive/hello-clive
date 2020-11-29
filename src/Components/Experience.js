@@ -53,7 +53,7 @@ const Career = () => {
 
       <div className={css`
         color: #acaeb0;
-        background-color: #1e272e;
+        background-color: #13222e;
         padding: 20px;
         width: 350px;
 
