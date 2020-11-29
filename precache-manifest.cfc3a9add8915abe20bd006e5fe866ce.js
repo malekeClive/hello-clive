@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f060baee630dcbcfae0b6d5b1b0110c0",
+    "revision": "bf451e971f92d0a818ebdaa6178e99c4",
     "url": "/hello-clive/index.html"
   },
   {
-    "revision": "33175bd37ec3546d37d6",
+    "revision": "c901aa31c69ce86e0c33",
     "url": "/hello-clive/static/css/main.30d739e5.chunk.css"
   },
   {
-    "revision": "41d9bea3e1a25e2f7620",
-    "url": "/hello-clive/static/js/2.bc57dddf.chunk.js"
+    "revision": "6c76c7cf8ce3151ba992",
+    "url": "/hello-clive/static/js/2.19cf40ab.chunk.js"
   },
   {
-    "revision": "bd031bf04b84968b2a4135e5f4733e80",
-    "url": "/hello-clive/static/js/2.bc57dddf.chunk.js.LICENSE.txt"
+    "revision": "2206f6f6cbbf99cae08d01b2952f71ad",
+    "url": "/hello-clive/static/js/2.19cf40ab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "33175bd37ec3546d37d6",
-    "url": "/hello-clive/static/js/main.c693091f.chunk.js"
+    "revision": "c901aa31c69ce86e0c33",
+    "url": "/hello-clive/static/js/main.76ba77cd.chunk.js"
   },
   {
     "revision": "ad804ceb02bb3fb2b5ff",
