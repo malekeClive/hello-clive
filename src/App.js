@@ -31,10 +31,11 @@ function App() {
   return (
     <div className={css`
       background-color: ${theme.theme.background};
+      transition: background-color .2s ease-in-out;
       color: ${theme.theme.text};
     `}>
-      {/* <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
-      { isSplashScreenDone ?  */}
+      <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
+      { isSplashScreenDone ? 
        <div>
           <main className={css`
             display: flex;
@@ -80,9 +81,9 @@ function App() {
             <Bottom />
           </footer>
         </div>
-      {/* :
+      :
         null
-      } */}
+      }
     </div>
   );
 }

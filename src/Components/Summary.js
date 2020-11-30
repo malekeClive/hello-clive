@@ -1,22 +1,23 @@
 import React, { useState, useContext } from 'react';
 import { css } from 'emotion';
 
+import Switcher from './Switcher';
 import profileImg from '../images/profile.jpeg';
 import { ThemeContext, themes } from '../Context/ThemeContext';
 
 export default function Summary() {
   const theme = useContext(ThemeContext);
-  const [ switchTheme, setSwitchTheme ] = useState(false);
-  const [ toggle, setToggle ] = useState(0);
+  const [ switchTheme, setSwitchTheme ] = useState(true);
+  // const [ toggle, setToggle ] = useState(100);
 
   // false -> light, true -> dark
   const switchThemes = (isLight) => {
     if (isLight) {
       theme.setTheme(themes.light);
-      setToggle(0);
+      // setToggle(0); 
     } else {
       theme.setTheme(themes.dark);
-      setToggle(100);
+      // setToggle(100);
     }
   }
 
@@ -29,12 +30,14 @@ export default function Summary() {
     <div className={css`
       position: relative;
     `}>
+      <Switcher switchHandler={switchHandler} switchTheme={switchTheme} />
       <h3 className={css`
         font-weight: 200;
         font-size: 3rem;
         margin-bottom: 3rem;
       `}>Profile summary</h3>
-      <div className={css`
+      
+      {/* <div className={css`
         position: absolute;
         right: 0;
         top: 0;
@@ -67,7 +70,8 @@ export default function Summary() {
         <p className={css`
           margin: 0 10px;
         `}>Dark</p>
-      </div>
+      </div> */}
+
       <div className={css`
         display: flex;
         flex-direction: column;
