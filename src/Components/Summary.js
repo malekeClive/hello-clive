@@ -7,7 +7,7 @@ import { ThemeContext, themes } from '../Context/ThemeContext';
 
 export default function Summary() {
   const theme = useContext(ThemeContext);
-  const [ switchTheme, setSwitchTheme ] = useState(true);
+  const [ switchTheme, setSwitchTheme ] = useState(false);
   // const [ toggle, setToggle ] = useState(100);
 
   // false -> light, true -> dark
