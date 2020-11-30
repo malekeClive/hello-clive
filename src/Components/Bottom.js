@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { css } from 'emotion';
+import { ThemeContext } from '../Context/ThemeContext';
 
 export default function Bottom() {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className={css`
+      background: ${theme.theme.background}
       position: absolute;
       width: 100%;
       padding-left: 10%;

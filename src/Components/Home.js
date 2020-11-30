@@ -1,10 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import { css } from 'emotion';
+import { ThemeContext } from '../Context/ThemeContext';
 
 import { TimelineMax, Power3 } from 'gsap';
 
 export default function Home() {
   const text1  = useRef(null);
+  const theme = useContext(ThemeContext);
 
   useEffect(() => {
     let tl = new TimelineMax();
@@ -28,11 +30,11 @@ export default function Home() {
         right: 10px;
         top: 10px;
         bottom: 10px;
-        border: 1px solid #13222e;
+        border: 1px solid ${theme.theme.text};
       `}></div>
       <h1 className={css`
         font-family: 'Caveat', cursive;
-        color: #1e272e;
+        color: ${theme.theme.text};
         font-size: 6rem;
         margin: 0;
         padding-top: 10rem;

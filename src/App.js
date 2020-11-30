@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 // import './App.css';
 import { css } from 'emotion';
 
@@ -14,10 +14,13 @@ import Expertise from './Components/Expertise';
 import { gsap } from 'gsap'
 import { CSSPlugin } from 'gsap/CSSPlugin'
 
+import { ThemeContext } from './Context/ThemeContext';
+
 // Force CSSPlugin to not get dropped during build
 gsap.registerPlugin(CSSPlugin)
 
 function App() {
+  const theme = useContext(ThemeContext);
   const [ isSplashScreenDone, setIsSplashScreenDone ] = useState(false);
 
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop); // from -> to
@@ -26,9 +29,12 @@ function App() {
   const executeScroll = () => scrollToRef(myRef);
 
   return (
-    <div className="container">
-      <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
-      { isSplashScreenDone ? 
+    <div className={css`
+      background-color: ${theme.theme.background};
+      color: ${theme.theme.text};
+    `}>
+      {/* <SplashScreen setIsSplashScreenDone={setIsSplashScreenDone} />
+      { isSplashScreenDone ?  */}
        <div>
           <main className={css`
             display: flex;
@@ -74,9 +80,9 @@ function App() {
             <Bottom />
           </footer>
         </div>
-      :
+      {/* :
         null
-      }
+      } */}
     </div>
   );
 }

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { css } from 'emotion';
+import { ThemeContext } from '../Context/ThemeContext';
 
 // vaporwave pallete
 const colors = ["1,205,254", "255,113,206", "5,255,161", "185,103,255", "255,251,150"];
@@ -42,6 +43,8 @@ export default function Expertise() {
 
 
 const Prolang = ({ name }) => {
+  const theme = useContext(ThemeContext);
+
   const getRandomIdx = () => {
     const length = colors.length;
     return Math.floor(Math.random() * length);
@@ -53,9 +56,10 @@ const Prolang = ({ name }) => {
     `}>
       <p className={css`
         color: rgb(${colors[getRandomIdx()]});
+        font-weight: ${theme.theme.weight};
         padding: 10px 20px;
         border-radius: 5px;
-        background-color: #1e272e;
+        background-color: ${theme.theme.text};
         box-shadow: 10px 10px 30px .5px rgba(${colors[getRandomIdx()]}, .7);
         font-size: 1rem;
         display: inline-block;
