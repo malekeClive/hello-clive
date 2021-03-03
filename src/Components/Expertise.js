@@ -63,6 +63,8 @@ const Prolang = ({ name }) => {
         box-shadow: 10px 10px 30px .5px rgba(${colors[getRandomIdx()]}, .7);
         font-size: 1rem;
         display: inline-block;
+        border-radius: 10px;
+        padding: 15px;
       `}>
         { name }
       </p>

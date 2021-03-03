@@ -36,42 +36,6 @@ export default function Summary() {
         font-size: 3rem;
         margin-bottom: 3rem;
       `}>Profile summary</h3>
-      
-      {/* <div className={css`
-        position: absolute;
-        right: 0;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      `}>
-        <p className={css`
-          margin: 0 10px;
-        `}>Light</p>
-        <button onClick={ switchHandler } className={css`
-          border: none;
-          outline: none;
-          width: 50px;
-          height: 25px;
-          border-radius: 20px;
-          background-color: ${ theme.theme.text };
-        `}>
-          <div className={css`
-            position: absolute;
-            background-color: ${ theme.theme.background };
-            top: 50%;
-            transform: translate(${toggle}%, -50%);
-            transition: transform .2s ease-in-out;
-            width: 20px;
-            height: 20px;
-            border-radius: 10px;
-          `}></div>
-        </button>
-        <p className={css`
-          margin: 0 10px;
-        `}>Dark</p>
-      </div> */}
-
       <div className={css`
         display: flex;
         flex-direction: column;
@@ -96,7 +60,8 @@ export default function Summary() {
         `}>
           I'm a front-end engineer and also i can
           do little bit things on back-end
-          side. Currently develop a
+          side. <br />
+          Currently develop a
           casino games using Unity on
           front-end side.
         </h2>

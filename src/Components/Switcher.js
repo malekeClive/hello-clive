@@ -87,6 +87,7 @@ export default function Switcher({ switchHandler, switchTheme }) {
           `}>
           </div>
           <button onClick={ switchHandler } className={css`
+            cursor: pointer;
             position: absolute;
             background-color: transparent;
             outline: none;
